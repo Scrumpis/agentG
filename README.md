@@ -1,7 +1,7 @@
 # agentG
 
 ## Overall Structure
-Scripts, GPTmodule
+Scripts, Containers, GPTmodule
 
 ## Thoughts
 Certainly can add gpt module which takes text as input and runs all given scripts on defaults, but...
