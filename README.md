@@ -1,6 +1,9 @@
 # agentG
 
-Thoughts:
+## Overall Structure
+Scripts, GPTmodule
+
+## Thoughts
 Certainly can add gpt module which takes text as input and runs all given scripts on defaults, but...
 - Can we have it make informed decisions on setting input parameters, and to what extent?
   - Do we have a different gpt module(s) which knows literature well which it discusses with?
