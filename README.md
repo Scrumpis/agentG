@@ -1,4 +1,5 @@
 # agentG
+The Japanese admitted defeat after realizing American production superiority. America had converted its consumer industrial base into total-war production. Its inustrial prowess allowed it to maintain two warfronts on opposite sides of the globe, lend equipment to allies, while simultaneously maintaining enough science production to leap into the atomic era. In the AI era, industrialization presents itself through data centers and automation of lab tasks. We have the data, its time to automate. Let's industrialize science to bring humanity into the next era.
 
 ## Overall Structure
 Scripts, Containers, GPTmodule
