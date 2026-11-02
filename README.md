@@ -1,13 +1,42 @@
 # agentG
 
-## Overall Structure
-Scripts, Containers, GPTmodule
+agentG is a model-agnostic foundation for scientific AI agents and research
+software development. It supplies shared principles, focused agent roles,
+portable skills and explicit validation practices that projects can adopt
+without changing their scientific identity or agent vendor.
 
-## Thoughts
-Certainly can add gpt module which takes text as input and runs all given scripts on defaults, but...
-- Can we have it make informed decisions on setting input parameters, and to what extent?
-  - Do we have a different gpt module(s) which knows literature well which it discusses with?
-  - Do we train it on the parameters and their outcomes? How much is needed? For instance, ChatGPT on its own already understands well enough to make suggestions, but can we tune that with biological knowledge so it takes the next step and says in this specific situation, where I am working with a polyploid from genus X with a genome length of blah, GC content of blah, etc., which parameters make the most sense?
-  - Can we have it adapt further steps based on what it learned in previous steps? Example, it runs iwgc-circos, notices GC content at a certain level, so in a different program further down the pipeline it adjusts a parameter to account for that?
-  - Do we give it a large text file of if then statements in plane English to guide it? Do we train it on that? If GC content is high, adjust parameter blah.
-  - Can we get it to a point where it itterates steps multiple times, if needed, based on its interpretation of the output? Example, it runs dndsR::ipr_enrichment.R and notices a lot of low count rare terms inflating the pvalues so it adjusts the min_count parameter higher and runs it again?
+The original vision remains: **Scripts, Containers, GPTmodule**, informed
+biological parameter selection, observations carried between analysis stages,
+and adaptive genomics workflows. The [original README](docs/vision-original.md)
+is preserved verbatim. The immediate foundation supports that longer-term work;
+it does not yet orchestrate genomics analyses or select parameters automatically.
+
+## Try the initial foundation
+
+Python 3.9+ and Git are sufficient; no model API or network is required.
+
+```sh
+python3 tools/agentg.py check
+python3 -m unittest discover -s tests -v
+python3 tools/agentg.py init /tmp/my-research-project --claude
+```
+
+The last command previews additions without writing files. Add `--apply` to
+stage into a fresh, authorized directory, then complete `.agentg/project.md`.
+Existing instruction files cause refusal; stage elsewhere for manual adoption.
+See [architecture and adoption](docs/architecture.md) for bundle contents and
+`verify`, and the [genomics example](examples/new-genomics-project.md).
+
+## What to read
+
+- [Shared constitution](foundation/constitution.md) and [four roles](foundation/roles/).
+- [Initialization](skills/initialize-project/SKILL.md) and
+  [independent validation](skills/independent-validation/SKILL.md) skills.
+- [Project-owned skill catalog](catalog/README.md), retaining authoritative sources.
+- [Research audit](docs/research-audit.md), including applicability and licenses.
+- [Behavioral evaluations](evals/README.md) and [actual validation](docs/validation.md).
+- [Versioned lessons](docs/lessons.md) and [roadmap](docs/roadmap.md).
+
+Candidate version 0.1.0 is under active development. File and test checks do not
+prove agent behavior or scientific validity. agentG's license and maintainer
+approval remain open decisions; no upstream material is silently relicensed.

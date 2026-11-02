@@ -67,8 +67,8 @@ and mandatory proactive dispatch do not generalize. No toolkit prompts copied.
 
 **rOpenSci.** [Statistical standards v0.2.0](https://stats-devguide.ropensci.org/standards.html)
 provide applicable checks for method references, input contracts, missingness,
-known-answer tests (G5.4), alternative implementations (G5.5), and algorithm
-properties (G5.6). Use relevant domain categories with reasons for omissions;
+known-answer and alternative-implementation tests (G5.4), fixed seeds (G5.5),
+and parameter recovery (G5.6). Use relevant domain categories with reasons for omissions;
 R-specific types, packaging and covariance interfaces are not universal rules.
 The foundation is informed by these standards; passing our checks is not
 rOpenSci peer review or certification.

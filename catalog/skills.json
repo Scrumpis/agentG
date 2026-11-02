@@ -1,0 +1,20 @@
+{
+  "format_version": 1,
+  "skills": [
+    {
+      "id": "dndsr",
+      "purpose": "Run and interpret the project-owned dndsR pairwise genomics workflow",
+      "source_repository": "https://github.com/Scrumpis/dndsR",
+      "source_path": "skills/dndsr/SKILL.md",
+      "reviewed_ref": "dev",
+      "reviewed_commit": "3f86d428be627439902642e0ac9e106a96d6b840",
+      "git_blob": "068781576eee36062c368aed3ec0b7383eb1ed5a",
+      "license_observed": "MIT; see upstream LICENSE.md",
+      "verification_path": "skills/dndsr/references/verification.md",
+      "limitations_path": "skills/dndsr/references/gaps.md",
+      "review_date": "2026-11-02",
+      "status": "reference-only; upstream evidence inspected, workflow not rerun by agentG",
+      "compatibility_notes": "Check chosen software revision against skill commands and evidence; some environment claims differ between upstream documents."
+    }
+  ]
+}
