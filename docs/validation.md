@@ -74,10 +74,13 @@ does not prove runtime compatibility. Validation/implementation tool allowlists
 are not filesystem sandboxes. Only Linux with Python 3.11.3 was exercised;
 Python 3.9+ compatibility is intended, not tested across interpreters or OSes.
 
-Machine reports are retained under `evals/results/` after the implementation
-commit. They identify that commit and exact canonical source hashes. The reports
-are evidence artifacts, not release approvals. Temporary project outputs were
-removed by the exercise; no unpublished data was used or committed.
+Machine reports were captured against implementation commit `21ea1f5`:
+[checks](../evals/results/checks.json),
+[adoption exercises](../evals/results/adoption.json), and
+[oracle probes](../evals/results/oracle-probes.json). The first two identify
+the full source commit and source hashes; the oracle report records its control
+outcomes. These are evidence artifacts, not release approvals. Temporary project
+outputs were removed by the exercise; no unpublished data was used or committed.
 
 Maintainers still need to choose agentG's license, review the candidate policy
 and lesson process, and commission independent trials before broader claims or

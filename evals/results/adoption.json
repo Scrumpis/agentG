@@ -1,0 +1,63 @@
+{
+  "executor": "task-author controlled exercise; not a fresh agent trial",
+  "environment": {
+    "python": "3.11.3",
+    "platform": "linux"
+  },
+  "foundation_commit": "21ea1f557ff7a239e8f54797dc4161ad2b985051",
+  "new_genomics": {
+    "preview_wrote_nothing": true,
+    "staged_bundle_hashes_verified_before_customization": true,
+    "foundation_source_sha256": {
+      "VERSION": "e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67",
+      "foundation/constitution.md": "d01c2c9b21a643cb0a65d697a184dce5c038ae571c3d15cc9441351fe8186066",
+      "foundation/project-template.md": "698de933174d984b64d33797080028dfb94212b9fe11962562b19e928e3e4edf",
+      "docs/third-party/dndsR-LICENSE.md": "16eec933f791e36557bef67ed96093600600754b81baf8824be623c679545ed2",
+      "foundation/roles/scientific-auditor.md": "c260675c960d7710083bb64064b21bfb00449b410a37c9f4e22bc2eb66547097",
+      "foundation/roles/software-auditor.md": "d6b7ae7ba08d7043e07879733376ae0c510a8c0d905d89bf3d055e712a1e6aa5",
+      "foundation/roles/validation-engineer.md": "deb6ef0ccaf3f89a87f3c8f27649d43c02ef7898fd96d067d6ddfa9a598e1701",
+      "foundation/roles/implementation-agent.md": "c959fb7b0737537bec4ea12475b78a20a297fd7200df2319b0327c3aa54774c2",
+      "skills/initialize-project/SKILL.md": "802951bec29aa836301e8866d9818f3b5e16f76df239aa663614998bf2850160",
+      "skills/independent-validation/SKILL.md": "532c7123f8bc742527a79077035875dfb4b290bb2f9b2c8a24caf15a6350d077"
+    },
+    "profile_sha256": "92de5a9b957fce8798283bda5233f165a0898d0ef996c3195badd17a128a16b9",
+    "fixture_sha256": "fd4ff0180be80ee8715758aa219a9fd3f0bbadcab32c04984b2deb2c94f445b8",
+    "command": "python3 extract_cds.py",
+    "exit_status": 0,
+    "actual": "CATGG",
+    "expected": "CATGGG",
+    "oracle": "manual complement and reversal of positions 4..9 inclusive, CCCATG",
+    "tolerance": "exact sequence identity",
+    "confirmed_error_detected": true,
+    "profile_customization": "intentional local edit after bundle verification"
+  },
+  "dndsr": {
+    "revision": "3f86d428be627439902642e0ac9e106a96d6b840",
+    "git_objects_verified": 17,
+    "files": [
+      ".claude/agents/implementation-agent.md",
+      ".claude/agents/scientific-auditor.md",
+      ".claude/agents/software-auditor.md",
+      ".claude/agents/validation-engineer.md",
+      ".claude/rules/git-policy.md",
+      ".claude/rules/scientific-integrity.md",
+      ".claude/rules/skill-maintenance.md",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "DESCRIPTION",
+      "LICENSE.md",
+      "skills/dndsr/SKILL.md",
+      "skills/dndsr/references/commands.md",
+      "skills/dndsr/references/gaps.md",
+      "skills/dndsr/references/verification.md",
+      ".agents/skills/dndsr",
+      ".claude/skills/dndsr"
+    ],
+    "mirror_initialization_refused": true,
+    "mirror_unchanged": true,
+    "source_HEAD_and_status_unchanged": true,
+    "source_operations": "git show, rev-parse and status only; GIT_OPTIONAL_LOCKS=0",
+    "scientific_tests_run": false
+  },
+  "exercise_checks_pass": true
+}

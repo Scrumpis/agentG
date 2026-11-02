@@ -1,0 +1,78 @@
+{
+  "source_commit": "21ea1f557ff7a239e8f54797dc4161ad2b985051",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_status": 0,
+      "stdout": "",
+      "stderr": "test_bundle_can_be_loaded_without_vendor_files (test_foundation.StagingTests.test_bundle_can_be_loaded_without_vendor_files) ... ok\ntest_claude_adapters_derive_from_shared_sources (test_foundation.StagingTests.test_claude_adapters_derive_from_shared_sources) ... ok\ntest_existing_claude_file_refuses_before_any_writes (test_foundation.StagingTests.test_existing_claude_file_refuses_before_any_writes) ... ok\ntest_existing_guidance_refuses_all_writes (test_foundation.StagingTests.test_existing_guidance_refuses_all_writes) ... ok\ntest_manifest_records_exact_source_bytes (test_foundation.StagingTests.test_manifest_records_exact_source_bytes) ... ok\ntest_manifest_traversal_rejected (test_foundation.StagingTests.test_manifest_traversal_rejected) ... ok\ntest_missing_file_detected (test_foundation.StagingTests.test_missing_file_detected) ... ok\ntest_nested_symlink_and_broken_symlink_refused (test_foundation.StagingTests.test_nested_symlink_and_broken_symlink_refused) ... ok\ntest_other_vendor_guidance_refused_even_without_adapter_flag (test_foundation.StagingTests.test_other_vendor_guidance_refused_even_without_adapter_flag) ... ok\ntest_parent_file_refuses_before_any_writes (test_foundation.StagingTests.test_parent_file_refuses_before_any_writes) ... ok\ntest_parent_traversal_refused_without_creating_directories (test_foundation.StagingTests.test_parent_traversal_refused_without_creating_directories) ... ok\ntest_preview_does_not_create_target (test_foundation.StagingTests.test_preview_does_not_create_target) ... ok\ntest_second_initialization_does_not_update_bundle (test_foundation.StagingTests.test_second_initialization_does_not_update_bundle) ... ok\ntest_source_and_generated_drift_detected (test_foundation.StagingTests.test_source_and_generated_drift_detected) ... ok\ntest_symlink_target_cannot_write_outside_destination (test_foundation.StagingTests.test_symlink_target_cannot_write_outside_destination) ... ok\ntest_dndsr_catalog_points_to_observed_source (test_foundation.StructureTests.test_dndsr_catalog_points_to_observed_source) ... ok\ntest_metadata_and_catalog (test_foundation.StructureTests.test_metadata_and_catalog) ... ok\ntest_circular_regression_does_not_establish_mean (test_oracles.OracleTests.test_circular_regression_does_not_establish_mean) ... ok\ntest_filtering_family_before_adjustment_detected (test_oracles.OracleTests.test_filtering_family_before_adjustment_detected) ... ok\ntest_missing_term_is_not_silently_ignored (test_oracles.OracleTests.test_missing_term_is_not_silently_ignored) ... ok\ntest_missing_worker_detected (test_oracles.OracleTests.test_missing_worker_detected) ... ok\ntest_one_base_error_detected (test_oracles.OracleTests.test_one_base_error_detected) ... ok\ntest_positive_controls (test_oracles.OracleTests.test_positive_controls) ... ok\n\n----------------------------------------------------------------------\nRan 23 tests in 0.536s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/agentg.py",
+        "check"
+      ],
+      "exit_status": 0,
+      "stdout": "Foundation metadata and catalog checks passed; no behavior or scientific claims verified.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "<skill-creator>/scripts/quick_validate.py",
+        "skills/initialize-project"
+      ],
+      "exit_status": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "<skill-creator>/scripts/quick_validate.py",
+        "skills/independent-validation"
+      ],
+      "exit_status": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_status": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "source_sha256": {
+    "VERSION": "e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67",
+    "catalog/README.md": "d8701a747505de4a9d7e40dca4431753ff18946bdbc671213fe3b44a3c9ce4b2",
+    "catalog/skills.json": "4bd155851e33fff100c3549daa16dd21cb8a3a25c216cf36d43dd48785c1efbd",
+    "evals/exercise_adoption.py": "e6a5b82e30898c332cb052d31145233d30039ee32c772a599ef7ba4549eb4cb7",
+    "evals/fixtures/extract_cds.py": "fd4ff0180be80ee8715758aa219a9fd3f0bbadcab32c04984b2deb2c94f445b8",
+    "evals/oracle_probes.py": "f83ebd1e1b9fc60dc5f10e50d956c0f3fcb411109bad93f74decd6671ede205e",
+    "foundation/constitution.md": "d01c2c9b21a643cb0a65d697a184dce5c038ae571c3d15cc9441351fe8186066",
+    "foundation/project-template.md": "698de933174d984b64d33797080028dfb94212b9fe11962562b19e928e3e4edf",
+    "foundation/roles/implementation-agent.md": "c959fb7b0737537bec4ea12475b78a20a297fd7200df2319b0327c3aa54774c2",
+    "foundation/roles/scientific-auditor.md": "c260675c960d7710083bb64064b21bfb00449b410a37c9f4e22bc2eb66547097",
+    "foundation/roles/software-auditor.md": "d6b7ae7ba08d7043e07879733376ae0c510a8c0d905d89bf3d055e712a1e6aa5",
+    "foundation/roles/validation-engineer.md": "deb6ef0ccaf3f89a87f3c8f27649d43c02ef7898fd96d067d6ddfa9a598e1701",
+    "skills/independent-validation/SKILL.md": "532c7123f8bc742527a79077035875dfb4b290bb2f9b2c8a24caf15a6350d077",
+    "skills/initialize-project/SKILL.md": "802951bec29aa836301e8866d9818f3b5e16f76df239aa663614998bf2850160",
+    "tests/test_foundation.py": "4fce5a92c80d02b56793637d62b9884ca43e5b8e084e884aae3665a3912a74ba",
+    "tests/test_oracles.py": "f75d03cb588aec50fa003567278a889aaa92f570c4b2855b5f7a297bb28ea3d9",
+    "tools/agentg.py": "dd0da8b79d9a5dbbb50ed5f7f4c21060eacb8becf983a0258b8611fb57669d09"
+  }
+}

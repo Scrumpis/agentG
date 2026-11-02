@@ -1,0 +1,19 @@
+{
+  "fixture_execution": "completed",
+  "defective_snapshot_consistency": true,
+  "defective_independent_checks": {
+    "E01": false,
+    "E02": false,
+    "E05": false,
+    "E06": false
+  },
+  "positive_independent_checks": {
+    "E01": true,
+    "E02": true,
+    "E05": true,
+    "E06": true
+  },
+  "oracle_origins": "exact arithmetic, stated coordinate convention, expected job inventory",
+  "probe_harness_pass": true,
+  "scope": "synthetic evaluation fixtures only; no model behavior or dndsR execution"
+}
